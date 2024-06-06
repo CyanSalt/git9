@@ -11,6 +11,7 @@ import {
   getRemoteCommit,
   getRemoteURL,
   hasCommit,
+  hasConflicts,
   isMerging,
 } from '../dist/index.mjs'
 
@@ -50,6 +51,15 @@ describe('isMerging', () => {
 
   it('should recognize current state', async () => {
     const state = await isMerging()
+    assert.strictEqual(state, false)
+  })
+
+})
+
+describe('hasConflicts', () => {
+
+  it('should recognize current state', async () => {
+    const state = await hasConflicts()
     assert.strictEqual(state, false)
   })
 

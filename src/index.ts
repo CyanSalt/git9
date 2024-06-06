@@ -26,8 +26,17 @@ export async function hasCommit(committish: string) {
   }
 }
 
-export async function isMerging() {
+export function isMerging() {
   return hasCommit('MERGE_HEAD')
+}
+
+export async function hasConflicts(subpath?: string) {
+  try {
+    await $(`git diff --name-only --diff-filter=U --exit-code${subpath ? ' ' + subpath : ''}`)
+    return false
+  } catch {
+    return true
+  }
 }
 
 export function getBranch(committish: string) {

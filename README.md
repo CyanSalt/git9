@@ -18,6 +18,7 @@ import {
   getCurrentCommit,
   hasCommit,
   isMerging,
+  hasConflicts,
   getBranch,
   getCurrentBranch,
   getConfig,
@@ -60,6 +61,14 @@ function isMerging(): Promise<boolean>
 ```
 
 Check whether the working repository is in the merging state. Equivalent to `hasCommit('MERGE_HEAD')`.
+
+### `hasConflicts`
+
+```ts
+function hasConflicts(subpath?: string): Promise<boolean>
+```
+
+Check whether the working repository has conflicts.
 
 ### `getBranch`
 
