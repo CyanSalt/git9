@@ -86,7 +86,7 @@ Get commit hash with a commit-ish string from remote.
 ### `getDifferences`
 
 ```ts
-function getDifferences(diffWith: string): Promise<{
+function getDifferences(committish: string): Promise<{
   name: string;
   status: string;
 }[]>
@@ -109,7 +109,7 @@ See [git-diff](https://git-scm.com/docs/git-diff).
 ### `getChangedFiles`
 
 ```ts
-function getChangedFiles(diffWith: string): Promise<string[]>
+function getChangedFiles(committish: string): Promise<string[]>
 ```
 
 Get changed files in current branch from the specified commit-ish.

@@ -43,8 +43,8 @@ export async function getRemoteCommittish(url: string, committish: string) {
   return line.split(/\s+/)[0]
 }
 
-export async function getDifferences(diffWith: string) {
-  const hash = await $(`git merge-base ${diffWith} HEAD`)
+export async function getDifferences(committish: string) {
+  const hash = await $(`git merge-base ${committish} HEAD`)
   if (hash) {
     const diffTree = await $(`git diff-tree --name-status -r ${hash} HEAD`)
     const lines = diffTree.split('\n').filter(Boolean)
@@ -56,8 +56,8 @@ export async function getDifferences(diffWith: string) {
   return []
 }
 
-export async function getChangedFiles(diffWith: string) {
-  const diff = await getDifferences(diffWith)
+export async function getChangedFiles(committish: string) {
+  const diff = await getDifferences(committish)
   return diff.filter(item => item.status !== 'D').map(item => item.name)
 }
 
