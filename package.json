@@ -1,6 +1,6 @@
 {
   "name": "git9",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Utilities for Git",
   "type": "module",
   "main": "./dist/index.cjs",

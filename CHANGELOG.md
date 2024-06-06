@@ -1,5 +1,12 @@
 
 
+## [0.2.1](https://github.com/CyanSalt/git9/compare/v0.2.0...v0.2.1) (2024-06-06)
+
+
+### Bug Fixes
+
+* add `hasConflicts` ([f52ca39](https://github.com/CyanSalt/git9/commit/f52ca3938e9fe68154eca19c7c2088e9c299043b))
+
 ## [0.2.0](https://github.com/CyanSalt/git9/compare/v0.1.0...v0.2.0) (2024-06-06)
 
 
