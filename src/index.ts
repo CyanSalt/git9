@@ -9,11 +9,15 @@ async function $(command: string) {
   return stdout.trim()
 }
 
-export function getCommittish(committish: string) {
+export function getCommit(committish: string) {
   return $(`git rev-parse -q ${committish}`)
 }
 
-export async function hasCommittish(committish: string) {
+export function getCurrentCommit() {
+  return getCommit('HEAD')
+}
+
+export async function hasCommit(committish: string) {
   try {
     const id = await $(`git rev-parse -q --verify ${committish}`)
     return Boolean(id)
@@ -23,7 +27,7 @@ export async function hasCommittish(committish: string) {
 }
 
 export async function isMerging() {
-  return hasCommittish('MERGE_HEAD')
+  return hasCommit('MERGE_HEAD')
 }
 
 export function getBranch(committish: string) {
@@ -38,7 +42,11 @@ export function getConfig(config: string) {
   return $(`git config ${config}`)
 }
 
-export async function getRemoteCommittish(url: string, committish: string) {
+export function getRemoteURL(name: string) {
+  return $(`git remote get-url ${name}`)
+}
+
+export async function getRemoteCommit(url: string, committish: string) {
   const line = await $(`git ls-remote ${url} ${committish}`)
   return line.split(/\s+/)[0]
 }

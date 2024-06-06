@@ -14,31 +14,41 @@ npm install --save git9
 
 ```js
 import {
-  getCommittish,
-  hasCommittish,
+  getCommit,
+  getCurrentCommit,
+  hasCommit,
   isMerging,
   getBranch,
   getCurrentBranch,
   getConfig,
-  getRemoteCommittish,
+  getRemoteURL,
+  getRemoteCommit,
   getDifferences,
   getChangedFiles,
   downloadFile,
 } from 'git9'
 ```
 
-### `getCommittish`
+### `getCommit`
 
 ```ts
-function getCommittish(committish: string): Promise<string>
+function getCommit(committish: string): Promise<string>
 ```
 
 Get commit hash with a commit-ish string.
 
-### `hasCommittish`
+### `getCurrentCommit`
 
 ```ts
-function hasCommittish(committish: string): Promise<boolean>
+function getCurrentCommit(): Promise<string>
+```
+
+Get commit hash of the current branch.
+
+### `hasCommit`
+
+```ts
+function hasCommit(committish: string): Promise<boolean>
 ```
 
 Check whether a specified branch or pointer exists.
@@ -49,7 +59,7 @@ Check whether a specified branch or pointer exists.
 function isMerging(): Promise<boolean>
 ```
 
-Check whether the working repository is in the merging state. Equivalent to `hasCommittish('MERGE_HEAD')`.
+Check whether the working repository is in the merging state. Equivalent to `hasCommit('MERGE_HEAD')`.
 
 ### `getBranch`
 
@@ -75,10 +85,18 @@ function getConfig(config: string): Promise<string>
 
 Get specified config value of the repository.
 
-### `getRemoteCommittish`
+### `getRemoteURL`
 
 ```ts
-function getRemoteCommittish(url: string, committish: string): Promise<string>
+function getRemoteURL(name: string): Promise<string>
+```
+
+Get remote repository URL with specified name.
+
+### `getRemoteCommit`
+
+```ts
+function getRemoteCommit(url: string, committish: string): Promise<string>
 ```
 
 Get commit hash with a commit-ish string from remote.

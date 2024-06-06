@@ -3,33 +3,44 @@ import { describe, it } from 'node:test'
 import {
   getBranch,
   getChangedFiles,
-  getCommittish,
+  getCommit,
   getConfig,
   getCurrentBranch,
+  getCurrentCommit,
   getDifferences,
-  getRemoteCommittish,
-  hasCommittish,
+  getRemoteCommit,
+  getRemoteURL,
+  hasCommit,
   isMerging,
 } from '../dist/index.mjs'
 
-describe('getCommittish', () => {
+describe('getCommit', () => {
 
   it('should return a SHA-1 hash string', async () => {
-    const hash = await getCommittish('HEAD')
+    const hash = await getCommit('HEAD')
     assert.match(hash, /^[0-9a-z]{40}$/)
   })
 
 })
 
-describe('hasCommittish', () => {
+describe('getCurrentCommit', () => {
+
+  it('should be able to get hash of the current branch', async () => {
+    const hash = await getCurrentCommit()
+    assert.match(hash, /^[0-9a-z]{40}$/)
+  })
+
+})
+
+describe('hasCommit', () => {
 
   it('should be able to detect HEAD', async () => {
-    const result = await hasCommittish('HEAD')
+    const result = await hasCommit('HEAD')
     assert.strictEqual(result, true)
   })
 
   it('should not throw even if the committish is non-existing', async () => {
-    const result = await hasCommittish('non-existing-branch')
+    const result = await hasCommit('non-existing-branch')
     assert.strictEqual(result, false)
   })
 
@@ -71,10 +82,19 @@ describe('getConfig', () => {
 
 })
 
-describe('getRemoteCommittish', () => {
+describe('getRemoteURL', () => {
+
+  it('should be able to get remote URL with name', async () => {
+    const url = await getRemoteURL('origin')
+    assert.ok(url.includes('github.com'))
+  })
+
+})
+
+describe('getRemoteCommit', () => {
 
   it('should be able to get main branch from GitHub', async () => {
-    const hash = await getRemoteCommittish('https://github.com/CyanSalt/git9.git', 'main')
+    const hash = await getRemoteCommit('https://github.com/CyanSalt/git9.git', 'main')
     assert.match(hash, /^[0-9a-z]{40}$/)
   })
 
