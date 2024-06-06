@@ -10,20 +10,28 @@ async function $(command: string) {
 }
 
 export function getCommittish(committish: string) {
-  return $(`git rev-parse -q --verify ${committish}`)
+  return $(`git rev-parse -q ${committish}`)
 }
 
-export function getBranch() {
-  return $('git rev-parse --abbrev-ref HEAD')
-}
-
-export async function isMerging() {
+export async function hasCommittish(committish: string) {
   try {
-    const id = await getCommittish('MERGE_HEAD')
+    const id = await $(`git rev-parse -q --verify ${committish}`)
     return Boolean(id)
   } catch {
     return false
   }
+}
+
+export async function isMerging() {
+  return hasCommittish('MERGE_HEAD')
+}
+
+export function getBranch(committish: string) {
+  return $(`git rev-parse --abbrev-ref ${committish}`)
+}
+
+export function getCurrentBranch() {
+  return getBranch('HEAD')
 }
 
 export function getConfig(config: string) {
