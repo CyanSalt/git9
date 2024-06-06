@@ -1,5 +1,12 @@
 
 
+## [0.2.0](https://github.com/CyanSalt/git9/compare/v0.1.0...v0.2.0) (2024-06-06)
+
+
+### Features
+
+* add new and rename functions ([bac15dd](https://github.com/CyanSalt/git9/commit/bac15dd337c686d2cb76e81258cbe1100af999a1))
+
 ## 0.1.0 (2024-06-06)
 
 
