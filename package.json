@@ -8,9 +8,14 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.mjs",
+        "default": "./dist/index.d.mts"
+      },
+      "require": {
+        "types": "./dist/index.cjs",
+        "default": "./dist/index.d.cts"
+      }
     }
   },
   "files": [
