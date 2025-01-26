@@ -1,5 +1,12 @@
 
 
+## [0.2.3](https://github.com/CyanSalt/git9/compare/v0.2.2...v0.2.3) (2025-01-26)
+
+
+### Bug Fixes
+
+* ts import for node esm ([f637975](https://github.com/CyanSalt/git9/commit/f637975a12229c6476512758a45254f0006837b7))
+
 ## [0.2.2](https://github.com/CyanSalt/git9/compare/v0.2.1...v0.2.2) (2024-06-06)
 
 
