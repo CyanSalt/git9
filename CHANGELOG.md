@@ -1,5 +1,12 @@
 
 
+## [0.2.4](https://github.com/CyanSalt/git9/compare/v0.2.3...v0.2.4) (2025-02-10)
+
+
+### Bug Fixes
+
+* exports ([ef8e067](https://github.com/CyanSalt/git9/commit/ef8e0671346761e06098bc52580ddda5479348a0))
+
 ## [0.2.3](https://github.com/CyanSalt/git9/compare/v0.2.2...v0.2.3) (2025-01-26)
 
 
