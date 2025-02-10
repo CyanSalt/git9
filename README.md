@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/git9.svg)](https://www.npmjs.com/package/git9)
 
-Utilities for Git.
+Utilities (How many letters?) for Git.
 
 ## Installation
 
