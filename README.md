@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/git9.svg)](https://www.npmjs.com/package/git9)
 
+<img src="https://cdn.jsdelivr.net/gh/CyanSalt/git9@main/docs/icon.svg" width="64" height="64">
+
 Utilities (How many letters?) for Git.
 
 ## Installation
