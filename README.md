@@ -23,6 +23,7 @@ import {
   hasConflicts,
   getBranch,
   getCurrentBranch,
+  getRootDirectory,
   getConfig,
   getRemoteURL,
   getRemoteCommit,
@@ -87,6 +88,14 @@ function getCurrentBranch(): Promise<string>
 ```
 
 Get the current branch name. Equivalent to `getCurrentBranch('HEAD')`.
+
+### `getRootDirectory`
+
+```ts
+function getRootDirectory(): Promise<string>
+```
+
+Get the root directory of the repository.
 
 ### `getConfig`
 

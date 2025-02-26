@@ -1,4 +1,5 @@
 import assert from 'node:assert'
+import path from 'node:path'
 import { describe, it } from 'node:test'
 import {
   getBranch,
@@ -10,6 +11,7 @@ import {
   getDifferences,
   getRemoteCommit,
   getRemoteURL,
+  getRootDirectory,
   hasCommit,
   hasConflicts,
   isMerging,
@@ -79,6 +81,15 @@ describe('getCurrentBranch', () => {
   it('should be able to get current branch', async () => {
     const branch = await getCurrentBranch()
     assert.strictEqual(branch, 'main')
+  })
+
+})
+
+describe('getRootDirectory', () => {
+
+  it('should be able to get root directory', async () => {
+    const root = await getRootDirectory()
+    assert.strictEqual(root, path.resolve(import.meta.filename, '../..'))
   })
 
 })

@@ -47,6 +47,10 @@ export function getCurrentBranch() {
   return getBranch('HEAD')
 }
 
+export function getRootDirectory() {
+  return $(`git rev-parse --show-toplevel`)
+}
+
 export function getConfig(config: string) {
   return $(`git config ${config}`)
 }
