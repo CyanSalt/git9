@@ -1,5 +1,5 @@
 import type { Readable } from 'stream'
-import getStream from 'get-stream'
+import { text } from 'stream/consumers'
 import * as tar from 'tar-stream'
 
 export function extract(inputStream: Readable, file: string) {
@@ -7,7 +7,7 @@ export function extract(inputStream: Readable, file: string) {
     const extractStream = tar.extract()
     extractStream.on('entry', async (header, stream, next) => {
       if (header.name === file) {
-        resolve(getStream(stream))
+        resolve(text(stream))
         stream.resume()
       } else {
         next()
