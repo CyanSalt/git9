@@ -1,4 +1,14 @@
+# Changelog
 
+## [0.3.0](https://github.com/CyanSalt/git9/compare/v0.2.4...v0.3.0) (2025-08-18)
+
+### Features
+
+* support sync mode ([8aca621](https://github.com/CyanSalt/git9/commit/8aca6215613cb0c60c2e756821aea11a04f5642a))
+
+### Bug Fixes
+
+* add `getRootDirectory` ([bc57b0d](https://github.com/CyanSalt/git9/commit/bc57b0d3b3d98ee231ffbed37b52f617d219d116))
 
 ## [0.2.4](https://github.com/CyanSalt/git9/compare/v0.2.3...v0.2.4) (2025-02-10)
 
