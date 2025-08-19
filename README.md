@@ -105,7 +105,7 @@ Get the branch name of a commit-ish.
 function getCurrentBranch(): Promise<string>
 ```
 
-Get the current branch name. Equivalent to `getCurrentBranch('HEAD')`.
+Get the current branch name. Equivalent to `getBranch('HEAD')`.
 
 ### `getRootDirectory`
 
