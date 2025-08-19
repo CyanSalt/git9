@@ -33,6 +33,24 @@ import {
 } from 'git9'
 ```
 
+This module is implemented with [quansync](https://github.com/quansync-dev/quansync), so all of these functions have both asynchronous and synchronous versions, and even _uncollapsed quantum_ versions. Therefore, you can use them in any of the following ways:
+
+```ts
+// 1. Simple asynchronous version
+const commit = await getCommit('HEAD')
+
+// 2. Explicit asynchronous version
+const commit = await getCommit.async('HEAD')
+
+// 3. Synchronous version
+const commit = getCommit.sync('HEAD')
+
+// 4. Uncollapsed quantum version
+const fn = quansync(function* () {
+  const commit = yield* getCommit('HEAD')
+})
+```
+
 ### `getCommit`
 
 ```ts
