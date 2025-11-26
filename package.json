@@ -42,7 +42,7 @@
   "homepage": "https://github.com/CyanSalt/git9#readme",
   "devDependencies": {
     "@cyansalt/eslint-config": "^4.4.2",
-    "@cyansalt/tsconfig": "^2.2.1",
+    "@cyansalt/tsconfig": "^3.0.0",
     "@release-it/conventional-changelog": "^10.0.1",
     "@types/node": "^22.17.2",
     "@types/tar-stream": "^3.1.4",

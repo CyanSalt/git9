@@ -19,8 +19,8 @@ importers:
         specifier: ^4.4.2
         version: 4.4.2(@babel/core@7.28.3)(@typescript-eslint/utils@8.39.1(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.39.1(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.33.0(jiti@2.5.1)))(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2)
       '@cyansalt/tsconfig':
-        specifier: ^2.2.1
-        version: 2.2.1
+        specifier: ^3.0.0
+        version: 3.0.0
       '@release-it/conventional-changelog':
         specifier: ^10.0.1
         version: 10.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.2.0)(release-it@19.0.4(@types/node@22.17.2))
@@ -157,8 +157,8 @@ packages:
       typescript:
         optional: true
 
-  '@cyansalt/tsconfig@2.2.1':
-    resolution: {integrity: sha512-Ld392akmPNSk4UpMhST41BLmXEgz1keEsYWhVwhEBXcZ9uIwrrgf8d8j2VJDDuV3vaZrz/4PxpbuywJeeuYJGw==}
+  '@cyansalt/tsconfig@3.0.0':
+    resolution: {integrity: sha512-RNCVL2Y0ChN+tg7A6hSWk2p4kWda0dsMI25xxDrOMLKWpgIYCsb73Qg9jZfGg7i0FSgMAaPWBpHVdsdxhojiAg==}
 
   '@emnapi/core@1.4.5':
     resolution: {integrity: sha512-XsLw1dEOpkSX/WucdqUhPWP7hDxSvZiY+fsUC14h+FtQ2Ifni4znbBt8punRX+Uj2JG/uDb8nEHVKvrVlvdZ5Q==}
@@ -3703,7 +3703,7 @@ snapshots:
       - eslint-plugin-import
       - supports-color
 
-  '@cyansalt/tsconfig@2.2.1': {}
+  '@cyansalt/tsconfig@3.0.0': {}
 
   '@emnapi/core@1.4.5':
     dependencies:
