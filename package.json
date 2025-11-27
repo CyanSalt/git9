@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
       "import": {
@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "lint": "eslint --fix './**/*.{js,ts}'",
-    "prepack": "unbuild",
+    "prepack": "tsdown",
     "test": "vitest",
     "release": "release-it"
   },
@@ -48,8 +48,8 @@
     "@types/tar-stream": "^3.1.4",
     "eslint": "^9.33.0",
     "release-it": "^19.0.4",
+    "tsdown": "^0.16.7",
     "typescript": "^5.9.2",
-    "unbuild": "^3.6.1",
     "vitest": "^3.2.4"
   },
   "dependencies": {
