@@ -51,6 +51,17 @@ const fn = quansync(function* () {
 })
 ```
 
+By default, all functions execute based on `process.cwd()`. If you want to execute based on a different directory, you can use `this` binding as follows:
+
+```ts
+// Use any of the following versions
+const commit = await getCommit.call({ cwd: anotherPath }, 'HEAD')
+
+const commit = await getCommit.async.call({ cwd: anotherPath }, 'HEAD')
+
+const commit = getCommit.sync.call({ cwd: anotherPath }, 'HEAD')
+```
+
 ### `getCommit`
 
 ```ts
