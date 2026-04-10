@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/CyanSalt/git9/compare/v0.3.0...v0.3.1) (2026-04-10)
+
+### Bug Fixes
+
+* fallback exports ([8334bb8](https://github.com/CyanSalt/git9/commit/8334bb84f19bcf11d1f73325559340bb7b1ea64c))
+* support this arg as context ([f7c83ef](https://github.com/CyanSalt/git9/commit/f7c83ef14ce041b4bfc8ee638301ebba72571d82))
+
 ## [0.3.0](https://github.com/CyanSalt/git9/compare/v0.2.4...v0.3.0) (2025-08-18)
 
 ### Features
