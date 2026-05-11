@@ -24,6 +24,7 @@
   ],
   "scripts": {
     "lint": "eslint --fix './**/*.{js,ts}'",
+    "lint:ci": "eslint --max-warnings 0 './**/*.{js,ts}'",
     "prepack": "tsdown",
     "test": "vitest",
     "release": "release-it"
@@ -60,19 +61,19 @@
     ]
   },
   "devDependencies": {
-    "@cyansalt/eslint-config": "^4.5.0",
+    "@cyansalt/eslint-config": "^4.6.0",
     "@cyansalt/tsconfig": "^3.0.2",
-    "@release-it/conventional-changelog": "^10.0.6",
-    "@types/node": "^22.19.17",
+    "@release-it/conventional-changelog": "^11.0.0",
+    "@types/node": "^24.12.3",
     "@types/tar-stream": "^3.1.4",
-    "eslint": "^9.39.4",
-    "release-it": "^19.2.4",
-    "tsdown": "^0.21.7",
+    "eslint": "^10.3.0",
+    "release-it": "^20.0.1",
+    "tsdown": "^0.22.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.5"
   },
   "dependencies": {
     "quansync": "^1.0.0",
-    "tar-stream": "^3.1.8"
+    "tar-stream": "^3.2.0"
   }
 }
